@@ -10,7 +10,7 @@ router.get("/", (req, resp) => {
 router.post('/', (req, resp) => {
 
   const { option , value } = req.body;
-  
+
   const resultArabigo = (value) => {
     try {
       return parse(value);
@@ -20,7 +20,7 @@ router.post('/', (req, resp) => {
   };
 
   const resultRoman = (value) => {
-    if (isNaN(value)) return "ingrese un número";
+    if (isNaN(value)) return "Not a number";
     try {
       return stringify(value);
     } catch (error) {
@@ -31,12 +31,20 @@ router.post('/', (req, resp) => {
 
   if (option === "parse") {
     const getResult = resultArabigo(value)
-    return resp.status(200).json(getResult);
+    const response = {
+    "response_type": "in_chanel",
+    "text": getResult
+    }; 
+    return resp.status(200).json(response);
   } 
 
   if (option === "stringify") {
     const getResult = resultRoman(value);
-    return resp.status(200).json(getResult);
+    const response = {
+      response_type: "in_chanel",
+      text: getResult,
+    }; 
+    return resp.status(200).json(response);
   } 
 
 });
