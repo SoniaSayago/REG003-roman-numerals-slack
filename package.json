@@ -22,7 +22,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "roman-numerals": "git+https://github.com/Briss302/REG003-roman-numerals.git"
+    "roman-numerals": "https://github.com/Briss302/REG003-roman-numerals.git"
   },
   "devDependencies": {
     "jest": "^27.0.6"
