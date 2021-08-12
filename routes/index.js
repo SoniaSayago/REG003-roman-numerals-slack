@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { parse, stringify } = require('roman-numerals');
+const { parse, stringify } = require('roman-numerals-sonibri');
 
 router.get("/", (req, resp) => {
   return resp.status(200).json(
