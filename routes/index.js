@@ -4,7 +4,7 @@ const { parse, stringify } = require('roman-numerals');
 
 router.get("/", (req, resp) => {
   return resp.status(200).json(
-    { "name": "roman-numera", "version":"1.0.0"});
+    { "name": "roman-numerals", "version":"1.0.0"});
 });
 
 router.post('/', (req, resp) => {
@@ -32,7 +32,7 @@ router.post('/', (req, resp) => {
   if (option === "parse") {
     const getResult = resultArabigo(value)
     const response = {
-    "response_type": "in_chanel",
+    "response_type": "in_channel",
     "text": getResult
     }; 
     return resp.status(200).json(response);
@@ -41,8 +41,8 @@ router.post('/', (req, resp) => {
   if (option === "stringify") {
     const getResult = resultRoman(value);
     const response = {
-      response_type: "in_chanel",
-      text: getResult,
+      "response_type": "in_channel",
+      "text": getResult,
     }; 
     return resp.status(200).json(response);
   } 
