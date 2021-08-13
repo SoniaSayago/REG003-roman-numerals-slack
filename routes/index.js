@@ -9,8 +9,9 @@ router.get("/", (req, resp) => {
 
 router.post('/', (req, resp) => {
 
-  const { option , value } = req.body;
-
+  const { text } = req.body;
+  const [option, value] = text.split(" ");
+  
   const resultArabigo = (value) => {
     try {
       return parse(value);
