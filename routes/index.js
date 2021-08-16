@@ -3,9 +3,11 @@ const express = require('express');
 const router = express.Router();
 const { parse, stringify } = require('roman-numerals-sonibri');
 
-router.get('/', (req, resp) => resp.status(200).json(
-  { name: 'roman-numerals', version: '1.0.0' },
-));
+
+router.get("/", (req, resp) => {
+  return resp.status(200).json(
+    { "name": "roman-numerals", "version":"1.0.0"});
+});
 
 router.post('/', (req, resp) => {
   const { text } = req.body;
@@ -31,16 +33,16 @@ router.post('/', (req, resp) => {
   if (option === 'parse') {
     const getResult = resultArabigo(value);
     const response = {
-      response_type: 'in_channel',
-      text: getResult,
-    };
+    "response_type": "in_channel",
+    "text": getResult
+    }; 
     return resp.status(200).json(response);
   }
 
   if (option === 'stringify') {
     const getResult = resultRoman(value);
     const response = {
-      response_type: 'in_channel',
+      response_type: "in_channel",
       text: getResult,
     };
     return resp.status(200).json(response);
