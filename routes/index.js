@@ -29,7 +29,6 @@ router.post('/', (req, resp) => {
     }
   };
 
-
   if (option === "parse") {
     const getResult = resultArabigo(value)
     const response = {
@@ -47,7 +46,12 @@ router.post('/', (req, resp) => {
     }; 
     return resp.status(200).json(response);
   } 
-
+  
+  return resp.status(400).json({
+    response_type: "ephemeral",
+    text: "That didn't work, enter a correct option. Please try again.",
+  });
+  
 });
 
 module.exports = router;
