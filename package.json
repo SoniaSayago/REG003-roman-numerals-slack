@@ -1,11 +1,11 @@
 {
   "name": "REG003-roman-numerals-slack",
   "version": "1.0.0",
-  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,13 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "roman-numerals-sonibri": "^1.0.0"
+    "roman-numerals-sonibri": "^1.0.0",
+    "supertest": "^6.1.5"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
     "jest": "^27.0.6"
   }
 }
