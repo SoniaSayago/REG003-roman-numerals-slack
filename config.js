@@ -1,1 +1,1 @@
-exports.port = process.argv[2] || process.env.PORT || 3000;
+exports.port = process.env.PORT || 3000;
